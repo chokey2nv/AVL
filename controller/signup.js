@@ -38,12 +38,14 @@ exports.signup_google = async function (body, callback){
         if(error?.length > 0)
             throw new Error(error[0]);
         const existingLogin = await Login.findOne({email});
-        const token = jwt.sign({email, password : hashPassword(userId), fullname, userId}, getSecreteKey());
+        let token;
         let _userId;
         if(existingLogin){
             _userId = existingLogin._id;
+            token = existingLogin.token;
         }else {
             const password = await hashPassword(userId);
+            token = jwt.sign({email, password : hashPassword(userId), fullname, userId}, getSecreteKey());
             const { _id } = await Login.create({
                 email, password, userId, verified : true, 
                 fullname, type : "google", token
@@ -63,13 +65,14 @@ exports.signup_facebook = async function (body, callback){
         // const error = validate.single(email, {presence : true, email : true})
         // if(error?.length > 0)
         //     throw new Error(error[0]);
-        let _userId;
+        let _userId, token;
         const password = await hashPassword(userId);
         const existingLogin = await Login.findOne({email});
-        const token = jwt.sign({email, password, fullname, userId}, getSecreteKey())
         if(existingLogin){
             _userId = existingLogin._id;
+            token = existingLogin.token;
         }else {
+            token = jwt.sign({email, password, fullname, userId}, getSecreteKey());
             const { _id } = await Login.create({
                 email, password, userId, verified : true, 
                 fullname, type : "facebook", token

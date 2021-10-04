@@ -40,6 +40,7 @@ window.addEventListener("load", function(){
             }
             if($("#logout").length > 0){
                 localStorage.removeItem(getAppValues().APP_TOKEN_ALIAS);
+                localStorage.removeItem(getAppValues().APP_USER_ID);
                 location.href = routeNames.login;
             }
             if($("#login_container").length > 0){
