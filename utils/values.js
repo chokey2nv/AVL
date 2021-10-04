@@ -1,6 +1,6 @@
 exports.getDomain = function(){
     return process.env.NODE_ENVIRONMENT === "development" ? 
-        "http://localhost:8002" : "https://avlbackend.herokuapp.com/";
+        "http://localhost:3000" : "https://avlbackend.herokuapp.com/";
 }
 exports.getSecreteKey = function(){
     return "avl_secret_key"

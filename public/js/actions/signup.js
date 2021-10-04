@@ -13,7 +13,8 @@ async function signup(_email, _password, _cpassword, notify){
         if(!signup) return $.notify(message, "error")
         const {token, userId} = result || {};
         $.notify("Login Success!", "success");
-        localStorage.setItem(getAppValues().APP_TOKEN_ALIAS, token)
+        localStorage.setItem(getAppValues().APP_TOKEN_ALIAS, token);
+        localStorage.setItem(getAppValues().APP_USER_ID, userId);
         window.location.href = routeNames.verifyNotice_+userId;
     });
 }

@@ -6,7 +6,7 @@ const express = require('express'),
 exphbs  = require('express-handlebars'),
 
 app = express(),
-port = process.env.PORT || 8002;
+port = process.env.PORT || 3000;
 
 app.engine('hbs', exphbs({
     extname : "hbs",

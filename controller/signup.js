@@ -38,7 +38,7 @@ exports.signup_google = async function (body, callback){
         if(error?.length > 0)
             throw new Error(error[0]);
         const existingLogin = await Login.findOne({email});
-        const token = jwt.sign({email, password, fullname, userId}, getSecreteKey());
+        const token = jwt.sign({email, password : hashPassword(userId), fullname, userId}, getSecreteKey());
         let _userId;
         if(existingLogin){
             _userId = existingLogin._id;
