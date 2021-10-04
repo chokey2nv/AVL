@@ -1,5 +1,3 @@
-const { getDomain } = require("../../../utils/values");
-
 function passwordValidation(password){
     if(!/(?=.{8,})/.test(password))
         return {result : false, message : "Password must contain at least 8 character"};
@@ -16,7 +14,7 @@ function passwordValidation(password){
 async function post(url, data, options, callback){
     return new Promise((resolve, reject) => {
         const {headers = {}} = options || {};
-        fetch(getDomain() + url, {
+        fetch(url, {
             method : "post",
             headers : {
                 "Content-Type" : "Application/json",
@@ -37,7 +35,7 @@ async function privatePost(url, data, options = {}, callback){
         const {headers = {}} = options;
         const token = localStorage.getItem(getAppValues().APP_TOKEN_ALIAS);
         const loginId = localStorage.getItem(getAppValues().APP_USER_ID);
-        fetch(getDomain() + url, {
+        fetch(url, {
             method : "post",
             headers : {
                 "Content-Type" : "Application/json",
