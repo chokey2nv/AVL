@@ -1,0 +1,31 @@
+<div>
+    {{> header }}
+</div>
+<div id="reset_container" class="login-container">
+    <fieldset class="login-fieldset">
+        <legend>
+            <h1>Reset Password</h1>
+        </legend> 
+        <div class="form-container">
+            <form method="get">
+                <div class="login-form-field-container">
+                    <label>Old Password</label>
+                    <input id="old_password" class="text-input" placeholder="Password"/>
+                </div>
+                <div class="login-form-field-container">
+                    <label>New Password</label>
+                    <input id="new_password" class="text-input" type="password" placeholder="New Password"/>
+                </div>
+                <div class="login-form-field-container">
+                    <label>Confirm New Password</label>
+                    <input id="new_cpassword" class="text-input" type="password" placeholder="Confirm New Password"/>
+                </div>
+                <div class="login-form-field-container">
+                    <div id="reset_btn" class="login-ext-btn login-btn">
+                        <label for="facebookBtn" class="login-ext-btn-txt">Login</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </fieldset>
+</div>

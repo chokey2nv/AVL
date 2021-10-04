@@ -1,0 +1,51 @@
+{
+  "name": "backend_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
+    "dev" : "NODE_ENVIRONMENT=development nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/chokey2nv/AVL.git"
+  },
+  "keywords": [
+    "avl",
+    "backend",
+    "task"
+  ],
+  "author": "Agu Chijioke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chokey2nv/AVL/issues"
+  },
+  "homepage": "https://github.com/chokey2nv/AVL#readme",
+  "dependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "axios": "^0.15.3",
+    "babel-plugin-async-to-promises": "^1.0.5",
+    "babel-polyfill": "^6.26.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "camo": "^0.12.4",
+    "cors": "^2.8.4",
+    "debug": "^4.1.1",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.2",
+    "express-handlebars": "^5.3.4",
+    "formidable": "^1.2.1",
+    "fs-capacitor": "^6.2.0",
+    "jquery": "^3.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "nedb": "^1.8.0",
+    "nodemailer": "^5.1.1",
+    "prop-types": "^15.6.1",
+    "shelljs": "^0.8.4",
+    "validate.js": "^0.13.1"
+  }
+}

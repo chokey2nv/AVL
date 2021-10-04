@@ -1,0 +1,40 @@
+<div>
+    {{> header }}
+</div>
+<div id="login_container" class="login-container">
+    <fieldset class="login-fieldset">
+        <legend>
+            <h1>Login</h1>
+        </legend> 
+        <div class="form-container">
+            <form method="get">
+                <div class="login-form-field-container">
+                    <label>Email</label>
+                    <input id="email" class="text-input" placeholder="Email"/>
+                </div>
+                <div class="login-form-field-container">
+                    <label>Password</label>
+                    <input id="password" class="text-input" type="password" placeholder="Password"/>
+                </div>
+                <div class="login-form-field-container">
+                    <div id="login_btn" class="login-ext-btn login-btn">
+                        <label for="facebookBtn" class="login-ext-btn-txt">Login</label>
+                    </div>
+                </div>
+                <hr/>
+                <div class="login-form-field-container">
+                    <div id="login_facebook" class="login-ext-btn">
+                        <img src="images/_fb.png" alt="facebook logo" class="login-ext-btn-img">
+                        <label for="facebookBtn" class="login-ext-btn-txt">Login with Facebook</label>
+                    </div>
+                </div>
+                <div class="login-form-field-container">
+                    <div id="login_google" class="login-ext-btn login-ext-btn-google">
+                        <img src="images/google.png" alt="facebook logo" class="login-ext-btn-img login-ext-btn-img-google">
+                        <label for="facebookBtn" class="login-ext-btn-txt">Login with Google</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </fieldset>
+</div>
