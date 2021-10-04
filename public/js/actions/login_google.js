@@ -1,5 +1,7 @@
 async function google_login(){
     const authResult = await authenticate();
+    console.log(authResult); 
+    return;
     const {dt} = authResult || {},
     {Ot : email, Se : fullname, fT : userId} = dt || {};
     post("/api/login_google", {

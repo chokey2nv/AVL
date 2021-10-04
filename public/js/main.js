@@ -5,9 +5,9 @@ window.addEventListener("load", function(){
             await loadScript("js/utils/google_auth.js");
             await loadScript("js/utils/routenames.js")
             await loadScript("js/utils/utils.js")
+            googleInit();
             
             if($("#signup_container").length > 0){
-                googleInit();
                 await loadScript("js/actions/signup.js");
                 await loadScript("js/actions/signup_google.js");
                 await loadScript("js/actions/signup_facebook.js");
@@ -60,6 +60,7 @@ window.addEventListener("load", function(){
                     facebook_login();
                 })
                 $("#login_google").on("click", () => {
+                    console.log("clicked")
                     google_login();
                 })
             }
@@ -92,7 +93,7 @@ window.addEventListener("load", function(){
                 })
             }
         }catch(error){
-            console.error(error);
+            console.log(error);
             $.notify(error.message, "error");
         }
     })();

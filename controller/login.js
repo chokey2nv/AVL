@@ -1,6 +1,6 @@
 const { comparePassword } = require("../database/password");
 const Login = require("../database/schemas/logins");
-const { signup_facebook } = require("./signup");
+const { signup_facebook, signup_google } = require("./signup");
 require("../database/connection");
 exports.login = async function ( body,  callback ) {
     try{

@@ -10,7 +10,7 @@ function googleInit(){
     });
 }
 function authenticate(callback) {
-    return window.gapi.auth2.getAuthInstance()
+    return window.gapi?.auth2?.getAuthInstance()
         .signIn({scope: "https://www.googleapis.com/auth/youtube.readonly"});
 }
 function loadClient() {
